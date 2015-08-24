@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--BaM-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="BaM" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchStockDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Name" id="R67-Dm-U3G">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <group width="1" alignment="left" id="G3Z-Ra-lF8">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="当前价格" id="zc4-f1-97r">
+                                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label alignment="right" verticalAlignment="center" text="涨幅" id="4BQ-4v-ayz">
+                                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="22"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="center" text="涨幅率" id="IOu-uN-djT">
+                            <color key="textColor" red="0.23529413339999999" green="0.98431378599999997" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </label>
+                        <imageView width="60" height="40" alignment="center" id="5Vj-Qa-Mig"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageShanghai" destination="5Vj-Qa-Mig" id="ri7-bo-0k5"/>
+                        <outlet property="labelName" destination="R67-Dm-U3G" id="g44-6Z-bKF"/>
+                        <outlet property="labelPrice" destination="zc4-f1-97r" id="8VS-P3-Wtc"/>
+                        <outlet property="labelUpPrice" destination="4BQ-4v-ayz" id="HK2-3P-wnu"/>
+                        <outlet property="labelUpScale" destination="IOu-uN-djT" id="yYy-oi-h90"/>
+                        <segue destination="r7d-9g-9hB" kind="relationship" relationship="nextPage" id="1mU-fP-Vl0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="311" y="361"/>
+        </scene>
+        <!--BaM-->
+        <scene sceneID="AnT-l1-vLq">
+            <objects>
+                <controller title="BaM" id="r7d-9g-9hB" customClass="NextInterfaceController" customModule="WatchStockDemo_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Name" id="ZeX-VG-2nc">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <group width="1" alignment="left" id="K6W-hx-YYI">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="当前价格" id="6Qa-82-6Wn">
+                                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label alignment="right" verticalAlignment="center" text="涨幅" id="Ykn-3e-box">
+                                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="22"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="center" text="涨幅率" id="Dr7-tg-C3u">
+                            <color key="textColor" red="0.23529413339999999" green="0.98431378599999997" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </label>
+                        <imageView width="60" height="40" alignment="center" id="Qwq-JW-jRM"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageShenZhen" destination="Qwq-JW-jRM" id="DAI-K2-cBc"/>
+                        <outlet property="labelName" destination="ZeX-VG-2nc" id="8tI-oB-PiQ"/>
+                        <outlet property="labelPrice" destination="6Qa-82-6Wn" id="dhf-OX-dQg"/>
+                        <outlet property="labelUpPrice" destination="Ykn-3e-box" id="5WY-HN-vrx"/>
+                        <outlet property="labelUpScale" destination="Dr7-tg-C3u" id="WVn-N4-zl2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="550" y="361"/>
+        </scene>
+    </scenes>
+</document>
